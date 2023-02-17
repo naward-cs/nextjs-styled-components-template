@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
+import { Main, Description, Code, Center, Grid, Card, Thirteen } from './styles'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <Main>
+      <Description>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          <Code>app/page.tsx</Code>
         </p>
         <div>
           <a
@@ -22,33 +21,32 @@ export default function Home() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
+              className="vercelLogo"
               width={100}
               height={24}
               priority
             />
           </a>
         </div>
-      </div>
+      </Description>
 
-      <div className={styles.center}>
+      <Center>
         <Image
-          className={styles.logo}
+          className="logo"
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
           height={37}
           priority
         />
-        <div className={styles.thirteen}>
+        <Thirteen>
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+        </Thirteen>
+      </Center>
 
-      <div className={styles.grid}>
-        <a
+      <Grid>
+        <Card
           href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -58,11 +56,10 @@ export default function Home() {
           <p className={inter.className}>
             Find in-depth information about Next.js features and API.
           </p>
-        </a>
+        </Card>
 
-        <a
+        <Card
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -70,11 +67,10 @@ export default function Home() {
             Templates <span>-&gt;</span>
           </h2>
           <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+        </Card>
 
-        <a
+        <Card
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,8 +80,8 @@ export default function Home() {
           <p className={inter.className}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
-      </div>
-    </main>
+        </Card>
+      </Grid>
+    </Main>
   )
 }
