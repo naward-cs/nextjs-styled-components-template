@@ -8,7 +8,7 @@
 
 ## Highlights
 
-- Features all the benefits of Next.js 13.1.6 with the new app directory
+- Features all the benefits of Next.js 13.3.0 with the new app directory
 - Uses Styled Components for CSS-in-JS
 - Typescript
 - Lint your code with `lint-staged`
@@ -17,10 +17,14 @@
 - Friendly errors & warnings
 - Includes Twitter's famous Bootstrap grid to quickly build your app
 - Automatically optimizes all your SVGs
-- Uses new NextJS built in SEO. You can use Next-SEO as an option if you prefer.
+- Uses new NextJS built in SEO. You can use Next-SEO as an option if you prefer. Refer to learn more section about using Next-SEO
+- Uses new NextJS build in fonts
 
 ```bash
 ├── app                         # App Folder
+│   └── api                       # api routes
+│       └── <api>                   # <api> api URI http://site/api/<api>
+│           └── route.ts              # URI access GET | POST | etc.
 │   └── page.tsx                  # Home page
 │   └── page.module.css           # Original CSS for main page
 │   └── styles.ts                 # Styled-Components version of page.module.css being used in page.tsx (example of co-locating files)
@@ -31,9 +35,6 @@
 │           └── head.tsx            # page header (if needed)
 │           └── layout.tsx          # page nested layout
 ├── docs                        # Documentation
-├── pages                       # Pages folder
-│   └── api                       # api routes
-│   └── <api>.tsx                 # <api> represents a static page URI for each site page that is not in app folder
 ├── public                      # Folder for static assets
 │   ├── favicon                   # Favicon - https://realfavicongenerator.net/
 ├── src                         # Folder for jsx, tsx, ts, js, css source code
@@ -51,8 +52,7 @@
 ├──  tsconfig.json              # Typescript config
 ├── .eslintrc.json              # Eslint config
 ├── .priettierc                 # Prettier config
-├── .stylelintrc                # Stylelint config
-└── next-seo.config.ts          # Next SEO Default settings
+└── .stylelintrc                # Stylelint config
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

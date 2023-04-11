@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import { Main, Description, Code, Center, Grid, Card, Thirteen } from './styles'
 const inter = Inter({ subsets: ['latin'] })
 
